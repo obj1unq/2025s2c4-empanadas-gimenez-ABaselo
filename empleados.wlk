@@ -1,6 +1,7 @@
 //Escribir aqui los objetos
 //EMPANADAS GIMENEZ
 object galvan{
+
   var sueldo = 15000
 
 method sueldoActual() = sueldo
@@ -15,7 +16,21 @@ var sueldo = 0
 
 method cantidadEmpanadas(cant) =  cant  
   
-method sueldoBaigorra(cant) = cant * 15   
-  
+method sueldo(cant) = cant * 15   
+
 
 }//fin objeto baigorria
+
+object gimenez{
+
+ var fondo = 300000
+method pagar() {
+  
+}
+ 
+
+ 
+
+  
+}//fin objeto gimenez
+
