@@ -32,8 +32,9 @@ method pagarSueldo(unEmpleado) {
         fondo -= unEmpleado.sueldo()
         unEmpleado.cobrar(unEmpleado.sueldo())
     }
+  
 
-method fondo() = fondo
+method fondoActual() = fondo
   
 
 
