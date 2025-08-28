@@ -4,9 +4,8 @@ object galvan{
 
   var sueldo = 15000
 
-method sueldoActual() = sueldo
-
-method sueldoNuevo(sueldoActual) = sueldoActual  
+method sueldo(suel) = suel 
+method sueldo() = sueldo  
 
 
 }//fin objeto galvan
@@ -14,23 +13,22 @@ method sueldoNuevo(sueldoActual) = sueldoActual
 object baigorria{
 var sueldo = 0
 
-method cantidadEmpanadas(cant) =  cant  
-  
+method vender(cant){
+  sueldo = cant * 15
+}    
 method sueldo(cant) = cant * 15   
-
+method sueldo() = sueldo
 
 }//fin objeto baigorria
 
 object gimenez{
 
  var fondo = 300000
-method pagar() {
+method fondoNuevo(gasto) = fondo - gasto 
+method fondo() {
+  fondo = 30000
   
 }
- 
-
- 
-
   
 }//fin objeto gimenez
 
