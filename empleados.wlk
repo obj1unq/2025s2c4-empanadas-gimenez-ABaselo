@@ -16,7 +16,9 @@ var sueldo = 0
 method vender(cant){
   sueldo = cant * 15
 }    
-method sueldo(cant) = cant * 15   
+method sueldo(cant){
+   cant * 15   
+}
 method sueldo() = sueldo
 
 }//fin objeto baigorria
@@ -28,6 +30,8 @@ object gimenez{
 method pagarSueldo(sueldoEmpleado)=sueldoEmpleado
 
 method fondo() = fondo
+
+
 
   
 }//fin objeto gimenez
