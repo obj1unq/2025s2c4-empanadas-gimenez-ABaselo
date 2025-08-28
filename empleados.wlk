@@ -4,16 +4,23 @@ object galvan{
 
   var sueldo = 15000
 
-method sueldo(suel) = suel 
-method sueldo() = sueldo  
+  /*
+  method sueldo() = sueldo
+  method sueldo(nuevoSueldo){
+    sueldo = nuevoSueldo
+  } 
+  */
+
+//propety es lo mismo que los dos metmetos anteriores
+var property sueldo = 15000 
 
 
 }//fin objeto galvan
 
 object baigorria{
-var sueldo = 0
+  var sueldo = 0
 
-method vender(cant){
+  method vender(cant){
   sueldo = cant * 15
 }    
 

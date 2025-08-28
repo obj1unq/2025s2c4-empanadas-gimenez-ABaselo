@@ -7,6 +7,10 @@ describe "Galvan" {
     assert.equals(15000,galvan.sueldo())
   }
 
+  test "le cambio el sueldo a Galvan" {
+    galvan.sueldo(20000)
+  }
+
 }
 
 
