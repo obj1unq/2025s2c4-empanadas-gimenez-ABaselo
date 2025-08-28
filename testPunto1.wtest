@@ -1,6 +1,6 @@
 import empleados.*
 
-
+//test unitario
 describe "Galvan" {
   test "el sueldo de Galvan arranca en 15000"{
 
@@ -12,7 +12,7 @@ describe "Galvan" {
   }
 
 }
-
+//test unitario
 describe "Baigorria" {
   test "baigorria" {
     baigorria.vender(500)
@@ -21,9 +21,25 @@ describe "Baigorria" {
   test "verder empanadas"{
     baigorria.vender(500)
     baigorria.vender(300)
+
   }
 }
+//test unitario
+describe "Gimenez" {
+  test "Arranca con 300000" {
+    assert.equals(300000, gimenez.fondo())
+  }
 
+}
+//test integrador
+describe "test integrador" {
+  test "pagar sueldos" {
+    gimenez.pagarSueldo(baigorria)
+    gimenez.pagarSueldo(galvan)
+    assert.equals(285000, gimenez.fondo())
+
+  }
+}
 
 
 /*
