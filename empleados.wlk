@@ -2,32 +2,31 @@
 //EMPANADAS GIMENEZ
 object galvan{
 
-  var sueldo = 15000
+//  var sueldo = 15000
 
   /*
   method sueldo() = sueldo
   method sueldo(nuevoSueldo){
-    sueldo = nuevoSueldo
-  } 
+  sueldo = nuevoSueldo
   */
 
-//propety es lo mismo que los dos metmetos anteriores
-var property sueldo = 15000 
-
+//propety es lo mismo que los dos metmetos anterioresvar property sueldo = 15000 
+var property sueldo = 15000
 
 }//fin objeto galvan
 
 object baigorria{
-  var sueldo = 0
+ 
+ const sueldoPorEmpanada = 15
+ var empandasVendidas = 0
 
   method vender(cant){
-  sueldo = cant * 15
+  empandasVendidas += cant 
 }    
 
-method sueldo(cant){
-   cant * 15   
-}
-method sueldo() = sueldo
+method sueldo() = empandasVendidas * sueldoPorEmpanada
+
+//method sueldo() = sueldo
 
 }//fin objeto baigorria
 
