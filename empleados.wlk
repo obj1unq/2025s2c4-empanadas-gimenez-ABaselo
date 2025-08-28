@@ -31,10 +31,9 @@ object gimenez{
 method pagarSueldo(unEmpleado) {
         fondo -= unEmpleado.sueldo()
         unEmpleado.cobrar(unEmpleado.sueldo())
-    }
-  
+}
 
-method fondoActual() = fondo
+method fondo() = fondo
   
 
 
