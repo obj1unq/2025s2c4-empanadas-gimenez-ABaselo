@@ -24,11 +24,11 @@ method sueldo() = sueldo
 object gimenez{
 
  var fondo = 300000
-method fondoNuevo(gasto) = fondo - gasto 
-method fondo() {
-  fondo = 30000
-  
-}
+ 
+method pagarSueldo(sueldoEmpleado)=sueldoEmpleado
+
+method fondo() = fondo
+
   
 }//fin objeto gimenez
 
