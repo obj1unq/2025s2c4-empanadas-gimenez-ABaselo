@@ -1,6 +1,7 @@
 //Escribir aqui los objetos
 //EMPANADAS GIMENEZ
 object galvan{
+  
 
 //  var sueldo = 15000
 
@@ -11,9 +12,18 @@ object galvan{
   */
 
 //propety es lo mismo que los dos metmetos anterioresvar property sueldo = 15000 
+//en este caso tiene que ir const ya que no accede a la propiedad, ya que es privada.
+  const property sueldo = 15000
 
-var property sueldo = 15000
+  method sueldo(suel) {
+   
+  }
 
+  method gastar(monto){
+      //calcular el saldo  
+  }
+
+  
 }//fin objeto galvan
 
 object baigorria{
@@ -52,10 +62,6 @@ method pagarSueldo(unEmpleado) {
         
        /// unEmpleado.cobrar(unEmpleado.sueldo())
 }
-
-
   
-
-
 }//fin objeto gimenez
 
