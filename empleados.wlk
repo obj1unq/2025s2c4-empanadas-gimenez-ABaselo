@@ -17,6 +17,11 @@ method deuda() = deuda
 
 method dinero() = dinero
 
+method cobrar(monto){
+ 
+
+
+}
 }//fin objeto galvan
 
 object baigorria{
@@ -30,24 +35,25 @@ object baigorria{
 
   method sueldo() = empandasVendidas * sueldoPorEmpanada
 
-  method cobrar(monto){ totalEmpanadasVendidas += monto}
+  method cobrar(monto){ 
+    totalEmpanadasVendidas += monto
+    totalEmpanadasVendidas = 0//reinicia
+    }
 
   method totalCobrado() = totalEmpanadasVendidas
 
 }//fin objeto baigorria
 
-
+//**************jefe gimenez***********
 object gimenez{
 
  var fondo = 300000
- method fondo() = fondo
 
-// var property fondo = 300000 
- 
+method fondo() = fondo
+
 method pagarSueldo(unEmpleado) {
         fondo -= unEmpleado.sueldo()
-        
-       /// unEmpleado.cobrar(unEmpleado.sueldo())
+           
 }
   
 }//fin objeto gimenez
