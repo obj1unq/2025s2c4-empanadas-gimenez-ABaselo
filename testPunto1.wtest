@@ -7,8 +7,12 @@ describe "Galvan" {
     assert.equals(15000,galvan.sueldo())
   }
 
+  
+
   test "le cambio el sueldo a Galvan" {
     galvan.sueldo(20000)
+    assert.equals(galvan.sueldo(), 20000
+    )
   }
 
 }
@@ -21,6 +25,7 @@ describe "Baigorria" {
   test "verder empanadas"{
     baigorria.vender(500)
     baigorria.vender(300)
+    assert.equals(baigorria.sueldo(), 4500)
 
   }
 }
@@ -41,6 +46,30 @@ describe "test integrador" {
   }
 }
 
+
+describe "prueba galvean" {
+  test "description" {
+  /*  
+    galvan.deuda(3000)
+    gimenez.pagarSueldo(galvan)
+    galvan.gastar(12000)   // ✅ esta línea es clave
+
+    assert.equals(0, galvan.dinero())
+*/ 
+   assert.equals(0, galvan.deuda()) 	
+   assert.equals(0, galvan.dinero()) 	
+   assert.equals(15000, galvan.sueldo()) 	
+    galvan.gastar(4000)
+   assert.equals(4000, galvan.deuda()) 	
+   assert.equals(0, galvan.dinero()) 
+   	galvan.gastar(8000)
+   assert.equals(12000, galvan.deuda()) 	
+   assert.equals(0, galvan.dinero()) 	
+   gimenez.pagarSueldo(galvan)  
+   assert.equals(0, galvan.deuda()) 	
+   assert.equals(3000, galvan.dinero()) 
+  }
+}
 
 /*
 describe "prueba del discribe" {

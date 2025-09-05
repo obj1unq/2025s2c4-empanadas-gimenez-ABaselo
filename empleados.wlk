@@ -4,24 +4,43 @@
 //objetos empleados
 object galvan{
 
-  var sueldoFijo =  15000
-  const  deuda = 0
-  const dinero = 0
+ var sueldoFijo = 15000
+    var deuda = 0
+    var dinero = 0
 
+    method sueldo() = sueldoFijo
 
-method sueldo() = sueldoFijo
+    method sueldo(nuevo) {
+        sueldoFijo = nuevo
+    }
 
-method cambiarSueldo(_cambiarSueldo) {sueldoFijo = _cambiarSueldo}
+    method cobrar(monto) {
+        
+        if (deuda > 0) {
+            if (deuda >= monto) {
+                deuda -= monto
+            } else {
+                dinero += monto - deuda
+                deuda = 0
+            }
+        } else {
+            dinero += monto
+        }
+    }
 
-method deuda() = deuda
+    method gastar(cuanto) {
+        if (dinero >= cuanto) {
+            dinero -= cuanto
+        } else {
+            const falta = cuanto - dinero
+            dinero = 0
+            deuda += falta
+        }
+    }
 
-method dinero() = dinero
+    method dinero() = dinero
+    method deuda() = deuda
 
-method cobrar(monto){
- 
-
-
-}
 }//fin objeto galvan
 
 object baigorria{
@@ -35,9 +54,12 @@ object baigorria{
 
   method sueldo() = empandasVendidas * sueldoPorEmpanada
 
+  
+
   method cobrar(monto){ 
     totalEmpanadasVendidas += monto
-    totalEmpanadasVendidas = 0//reinicia
+    totalEmpanadasVendidas = 0
+    
     }
 
   method totalCobrado() = totalEmpanadasVendidas
@@ -46,7 +68,6 @@ object baigorria{
 
 //**************jefe gimenez***********
 object gimenez{
-
  var fondo = 300000
 
 method fondo() = fondo
