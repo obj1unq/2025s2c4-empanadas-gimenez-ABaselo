@@ -1,54 +1,41 @@
 //Escribir aqui los objetos
 //EMPANADAS GIMENEZ
+
+//objetos empleados
 object galvan{
-  
 
-//  var sueldo = 15000
+  var sueldoFijo =  15000
+  const  deuda = 0
+  const dinero = 0
 
-  /*
-  method sueldo() = sueldo
-  method sueldo(nuevoSueldo){
-  sueldo = nuevoSueldo
-  */
 
-//propety es lo mismo que los dos metmetos anterioresvar property sueldo = 15000 
-//en este caso tiene que ir const ya que no accede a la propiedad, ya que es privada.
-  const property sueldo = 15000
+method sueldo() = sueldoFijo
 
-  method sueldo(suel) {
-   
-  }
+method cambiarSueldo(_cambiarSueldo) {sueldoFijo = _cambiarSueldo}
 
-  method gastar(monto){
-      //calcular el saldo  
-  }
+method deuda() = deuda
 
-  
+method dinero() = dinero
+
 }//fin objeto galvan
 
 object baigorria{
  
- const sueldoPorEmpanada = 15
- var empandasVendidas = 0
-  
-  // var sueldo = 0 //ansiosa por saber el dato.
-
-  //vamos a usar la version perzosa de programacion para. trabajo con el dato en el momento. no debo actualizar
-  //me interesa practicar este version, porque es natural. para sacar el metodo estructura
-  //el objetivo de la materia es entender el objeto por medio de los mensajes y la capacidad.
-
-  //method sueldo() = sueldo // genera ya un metodo de mas por saber el dato del sueldo
-  method vender(cant){
-  empandasVendidas += cant 
-  //sueldo += cant * sueldoporEmpanada // lo que hace es tener mas linea de codigo
-
-}    
-
-method sueldo() = empandasVendidas * sueldoPorEmpanada
+  const sueldoPorEmpanada = 15
+  var empandasVendidas = 0
+  var totalEmpanadasVendidas = 0
 
 
+  method vender(cant){empandasVendidas = cant}
+
+  method sueldo() = empandasVendidas * sueldoPorEmpanada
+
+  method cobrar(monto){ totalEmpanadasVendidas += monto}
+
+  method totalCobrado() = totalEmpanadasVendidas
 
 }//fin objeto baigorria
+
 
 object gimenez{
 
