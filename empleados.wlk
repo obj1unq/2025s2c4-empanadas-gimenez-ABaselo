@@ -15,16 +15,15 @@ object galvan{
     }
 
     method cobrar(monto) {
-        
         if (deuda > 0) {
-            if (deuda >= monto) {
-                deuda -= monto
-            } else {
-                dinero += monto - deuda
+            deuda -= monto
+            if (deuda < 0) {
+                dinero += -deuda
                 deuda = 0
             }
         } else {
             dinero += monto
+            deuda = 0
         }
     }
 
@@ -50,15 +49,15 @@ object baigorria{
   var totalEmpanadasVendidas = 0
 
 
-  method vender(cant){empandasVendidas = cant}
+  method vender(cant){empandasVendidas += cant}
 
   method sueldo() = empandasVendidas * sueldoPorEmpanada
 
   
 
   method cobrar(monto){ 
-    totalEmpanadasVendidas += monto
-    totalEmpanadasVendidas = 0
+    totalEmpanadasVendidas += monto 
+    empandasVendidas = 0
     
     }
 
@@ -73,7 +72,9 @@ object gimenez{
 method fondo() = fondo
 
 method pagarSueldo(unEmpleado) {
-        fondo -= unEmpleado.sueldo()
+       const monto = unEmpleado.sueldo()
+       fondo -= monto
+       unEmpleado.cobrar(monto)
            
 }
   
